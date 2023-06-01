@@ -23,5 +23,5 @@ Scripts
 
 Env Variables:
 ---
-VITE_ENABLE_MSW: enable or disable MSW, for mocking a Rest API
-VITE_REMINDERS_API: the path for the Rest API
+- VITE_ENABLE_MSW: enable or disable MSW, for mocking a Rest API
+- VITE_REMINDERS_API: the path for the Rest API
