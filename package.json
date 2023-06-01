@@ -1,7 +1,7 @@
 {
   "name": "reminders-webcomponent",
   "private": false,
-  "version": "1.0.2",
+  "version": "1.0.3",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -33,6 +33,7 @@
     "eslint": "^8.38.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.3.4",
+    "http-server": "^14.1.1",
     "msw": "^1.2.1",
     "typescript": "^5.0.2",
     "vite": "^4.3.9"
