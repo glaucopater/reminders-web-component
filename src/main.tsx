@@ -15,10 +15,9 @@ if (
 ) {
   worker.start();
 }
-console.log(appPackage.version);
 
 if (import.meta.env.MODE === "production") {
-  console.info("web-reminders mfe is connected ver: ", appPackage.version);
+  console.info("web-reminders mfe is connected ver:", appPackage.version);
   customElements.define("web-reminders", WebReminders);
 } else {
   ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
