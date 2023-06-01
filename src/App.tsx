@@ -5,7 +5,6 @@ import { CustomCardProps } from "./components/CustomCard";
 import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
   const [currentData, setCurrentData] = useState<CustomCardProps[]>(mockData);
 
   useEffect(() => {
@@ -21,8 +20,6 @@ function App() {
   const handleFetchData = () => {
     logJSONData();
   };
-
-  console.log("currentData", currentData);
 
   return (
     <div className="p-2 rounded">
