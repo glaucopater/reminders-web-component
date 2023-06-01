@@ -7,7 +7,7 @@ This application allows custom reminders management (CRUD operations, according 
 At build time the application is bundled and exposed as a web component named "web-reminders" and can be consumed by another web page.
 Vite is configured in order to generate always index.js and index.css as assets instead of a random name using an hash. 
 
-Currently this web component can be consumed by https://github.com/glaucopater/reminders-web-component
+Currently this web component can be consumed by https://github.com/glaucopater/reminders-web-components-host
 
 Setup
 ---
