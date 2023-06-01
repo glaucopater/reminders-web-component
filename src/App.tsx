@@ -12,19 +12,26 @@ function App() {
   }, []);
 
   async function logJSONData() {
-    const response = await fetch("/reminders");
-    const jsonData = await response.json();
-    setCurrentData(jsonData);
+    if(import.meta.env.VITE_REMINDERS_API){
+      const response = await fetch(import.meta.env.VITE_REMINDERS_API);
+      const jsonData = await response.json();
+      setCurrentData(jsonData);
+    }
+    else console.warn("Missing API!");
   }
 
   const handleFetchData = () => {
     logJSONData();
   };
 
+  const setToDoneReminder = (id: string) => {
+    setCurrentData(currentData.filter((reminder) => reminder.id !== id));
+  };
+
   return (
-    <div className="p-2 rounded">
-      <button onClick={handleFetchData}>Load data</button>
-      <CardList cards={currentData} />
+    <div className="p-2 rounded flex flex-col border border-white w-48">
+      <button onClick={handleFetchData}>Reload data</button>
+      <CardList cards={currentData} setToDoneReminder={setToDoneReminder} />
     </div>
   );
 }

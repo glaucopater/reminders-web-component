@@ -5,6 +5,7 @@ import r2wc from "@r2wc/react-to-web-component";
 import "./main.css";
 import "./index.css";
 import { worker } from "./mocks/browser";
+import * as appPackage from "../package.json";
 
 export const WebReminders = r2wc(App);
 
@@ -14,9 +15,10 @@ if (
 ) {
   worker.start();
 }
+console.log(appPackage.version);
 
 if (import.meta.env.MODE === "production") {
-  console.info("web-reminders is connected");
+  console.info("web-reminders mfe is connected ver: ", appPackage.version);
   customElements.define("web-reminders", WebReminders);
 } else {
   ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
