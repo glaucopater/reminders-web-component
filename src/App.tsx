@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
-import "./App.css";
 import { CardList } from "./components/CardList";
+import { mockData } from "./mocks/handlers";
+import { CustomCardProps } from "./components/CustomCard";
+import "./App.css";
 
 function App() {
   const [count, setCount] = useState(0);
-  const [currentData, setCurrentData] = useState([]);
+  const [currentData, setCurrentData] = useState<CustomCardProps[]>(mockData);
 
   useEffect(() => {
     logJSONData();
@@ -20,16 +22,13 @@ function App() {
     logJSONData();
   };
 
+  console.log("currentData", currentData);
+
   return (
-    <>
+    <div className="p-2 rounded">
       <button onClick={handleFetchData}>Load data</button>
       <CardList cards={currentData} />
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-      </div>
-    </>
+    </div>
   );
 }
 

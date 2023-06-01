@@ -8,11 +8,15 @@ import { worker } from "./mocks/browser";
 
 export const WebReminders = r2wc(App);
 
-if (process.env.NODE_ENV === "development") {
+if (
+  import.meta.env.MODE === "development" &&
+  import.meta.env.VITE_ENABLE_MSW === "true"
+) {
   worker.start();
 }
 
 if (import.meta.env.MODE === "production") {
+  console.info("web-reminders is connected");
   customElements.define("web-reminders", WebReminders);
 } else {
   ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
