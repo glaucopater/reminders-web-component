@@ -7,6 +7,8 @@ export const mockData: CustomCardProps[] = [
     id: "1",
     title: "Buy Milk",
     date: new Date().getTime(),
+    // eslint-disable-next-line @typescript-eslint/no-empty-function
+    setToDoneReminder: () => { }
   },
 ];
 
