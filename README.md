@@ -5,6 +5,7 @@ A Reminders Web Component build with React, TypeScript, @r2wc/react-to-web-compo
 
 This application allows custom reminders management (CRUD operations, according to a specific REST Api).
 At build time the application is bundled and exposed as a web component named "web-reminders" and can be consumed by another web page.
+Vite is configured in order to generate always index.js and index.css as assets instead of a random name using an hash. 
 
 Setup
 ---
