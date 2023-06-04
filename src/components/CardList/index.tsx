@@ -7,7 +7,7 @@ type CardListProps = {
 
 export const CardList = ({ cards, setToDoneReminder }: CardListProps) => {
   return (
-    <div className="min-h-screen p-8 flex items-start justify-center">
+    <div className="h-[80vh] p-8 flex items-start justify-center overflow-y-auto overflow-x-hidden">
       <div className="flex flex-col items-start space-y-4">
         {cards?.map((item) => (
           <Card
