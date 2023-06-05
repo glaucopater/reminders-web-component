@@ -104,16 +104,14 @@ const Modal: React.FC<ModalProps> = ({ onClose }) => {
               className="w-full border-gray-300 border p-2 rounded focus:outline-none focus:border-blue-500"
             />
           </div>
-          <div className="flex">
-            <label className="text-gray-700 font-medium text-left">
-              Recurrence
+          <div className="flex my-4">
+            <label className="inline-flex items-center">
+              <span className="text-gray-700 font-medium text-left">Recurrence</span>
+              <input type="checkbox" className="w-4 h-4 mx-2"
+                checked={hasRecurrence}
+                onChange={() => setHasRecurrence(!hasRecurrence)}
+              />
             </label>
-            <input
-              type="checkbox"
-              className="mx-2"
-              checked={recurrence !== null}
-              onChange={() => setHasRecurrence(!hasRecurrence)}
-            />
           </div>
           <div
             className={`p2 rounded ${
