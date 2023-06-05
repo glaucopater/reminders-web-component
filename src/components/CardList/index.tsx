@@ -14,6 +14,7 @@ export const CardList = ({ cards, setToDoneReminder }: CardListProps) => {
             key={item.id}
             id={String(item.id)}
             title={item.title}
+            date={item.date}
             setToDoneReminder={setToDoneReminder}
           />
         ))}
